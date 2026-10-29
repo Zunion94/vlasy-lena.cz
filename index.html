@@ -11,7 +11,7 @@
     <meta property="og:image" content="https://www.vlasy-lena.cz/media/salon_%20(1).jpg">
     <meta property="og:type" content="website">
     <script>document.documentElement.classList.add('js');</script>
-    <link rel="icon" href="img/lena_logo.png">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -54,7 +54,13 @@
     <header class="site-header" id="top">
         <div class="container header-inner">
             <a href="#top" class="brand" aria-label="Kadeřnictví Lena – úvod">
-                <img src="img/lena_logo.png" alt="Kadeřnictví Lena – styl a péče" width="180" height="58">
+                <svg class="brand-mark" viewBox="0 0 48 56" aria-hidden="true">
+                    <path class="mark-arch" d="M6 53V24a18 18 0 0 1 36 0v29z"/>
+                    <path class="mark-strand" d="M21 13c-3.5 9 3 17.5-1 27.5-2 5 1.5 7.4 6.5 6.6 3.6-.6 6.6-2.3 9.5-4.6"/>
+                    <path class="mark-strand-thin" d="M25.5 15.5c-2.6 7.8 2.6 14.3-.6 22.3"/>
+                    <path class="mark-spark" d="M33 18.5l1.2 2.6 2.6 1.2-2.6 1.2-1.2 2.6-1.2-2.6-2.6-1.2 2.6-1.2z"/>
+                </svg>
+                <span class="brand-text"><span class="brand-name">Lena</span><span class="brand-tag">Styl a péče</span></span>
             </a>
             <nav class="site-nav" id="site-nav" aria-label="Hlavní navigace">
                 <ul>
@@ -339,7 +345,15 @@
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <img src="img/lena_logo.png" alt="Kadeřnictví Lena" class="footer-logo" width="150" height="48" loading="lazy">
+            <a href="#top" class="brand brand-footer" aria-label="Kadeřnictví Lena">
+                <svg class="brand-mark" viewBox="0 0 48 56" aria-hidden="true">
+                        <path class="mark-arch" d="M6 53V24a18 18 0 0 1 36 0v29z"/>
+                        <path class="mark-strand" d="M21 13c-3.5 9 3 17.5-1 27.5-2 5 1.5 7.4 6.5 6.6 3.6-.6 6.6-2.3 9.5-4.6"/>
+                        <path class="mark-strand-thin" d="M25.5 15.5c-2.6 7.8 2.6 14.3-.6 22.3"/>
+                        <path class="mark-spark" d="M33 18.5l1.2 2.6 2.6 1.2-2.6 1.2-1.2 2.6-1.2-2.6-2.6-1.2 2.6-1.2z"/>
+                    </svg>
+                    <span class="brand-text"><span class="brand-name">Lena</span><span class="brand-tag">Styl a péče</span></span>
+            </a>
             <nav aria-label="Patička">
                 <a href="#o-mne">O mně</a>
                 <a href="#cenik">Ceník</a>
