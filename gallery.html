@@ -1,75 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadeřnictví Lena</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/gallery.css">
+    <title>Galerie – Kadeřnictví Lena</title>
+    <meta name="description" content="Prohlédněte si salon kadeřnictví LENA v Holasicích a ukázky střihů, barvení a stylingu.">
+    <meta name="theme-color" content="#faf7f2">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="icon" href="img/lena_logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="js/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="left-side">
-            <div class="logo-container">
-                <img src="img/lena_logo.png" alt="Logo kadeřnictví Lena">
-            </div>
-            <div class="cross"><img src="img/cross.svg" alt="" id="cross"></div>
-        </div>
-        <div class="right-side">
-            <div class="ham"><img src="img/ham.svg" alt="" id="ham"></div>
-            <nav>
+    <a class="skip-link" href="#main">Přeskočit na obsah</a>
+
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="Kadeřnictví Lena – úvod">
+                <img src="img/lena_logo.png" alt="Kadeřnictví Lena – styl a péče" width="180" height="58">
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Hlavní navigace">
                 <ul>
-                    <li class="navbar"><a href="index.html">Domů</a></li>
-                    <li class="navbar"><a href="#" onclick="goToSection('index.html', 'cenik')">Ceník</a></li>
-                    <li class="navbar"><a href="gallery.html">Galerie</a></li>
-                    <li class="navbar"><a href="#" onclick="goToSection('index.html', 'contact')">Kontakt</a></li>
+                    <li><a href="index.html#o-mne">O mně</a></li>
+                    <li><a href="index.html#cenik">Ceník</a></li>
+                    <li><a href="index.html#recenze">Recenze</a></li>
+                    <li><a href="gallery.html" class="is-active" aria-current="page">Galerie</a></li>
+                    <li><a href="index.html#contact">Kontakt</a></li>
                 </ul>
+                <a href="tel:+420603756868" class="btn btn-primary nav-cta">
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+                    Objednat se
+                </a>
             </nav>
+            <button class="nav-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="site-nav">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
-    <main>
-    <div class="popup" id="popup" onclick="hidePopup()">
-        <img id="popup-img" src="" alt="Full Size Photo">
-    </div>
-    <div class="content-wrapper">
-        <section class="gallery-salon">
-            <img src="media/salon_ (1).jpg" onclick="showPopup(this)">
-            <img src="media/salon_ (2).jpg" onclick="showPopup(this)">
-            <img src="media/salon_ (3).jpg" onclick="showPopup(this)">
-            <img src="media/salon_ (4).jpg" onclick="showPopup(this)">
-            <img src="media/salon_ (5).jpg" onclick="showPopup(this)">
-            <img src="media/salon_ (6).jpg" onclick="showPopup(this)">
+
+    <main id="main">
+        <section class="section gallery-page">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Galerie</p>
+                    <h1>Salon a ukázky <em>mé práce</em></h1>
+                    <p>Klikněte na fotografii pro zvětšení. Mezi fotkami můžete listovat šipkami nebo přejetím prstu.</p>
+                </div>
+
+                <div class="filters reveal" role="group" aria-label="Filtr galerie">
+                    <button class="filter is-active" data-filter="all" aria-pressed="true">Vše</button>
+                    <button class="filter" data-filter="hair" aria-pressed="false">Účesy</button>
+                    <button class="filter" data-filter="salon" aria-pressed="false">Salon</button>
+                </div>
+
+                <div class="gallery-grid" data-gallery>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (1).jpg" alt="Ukázka účesu 1" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="salon"><img src="media/salon_ (1).jpg" alt="Interiér salonu 1" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (2).jpg" alt="Ukázka účesu 2" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (3).jpg" alt="Ukázka účesu 3" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="salon"><img src="media/salon_ (2).jpg" alt="Interiér salonu 2" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (4).jpg" alt="Ukázka účesu 4" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (5).jpg" alt="Ukázka účesu 5" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="salon"><img src="media/salon_ (3).jpg" alt="Interiér salonu 3" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (6).jpg" alt="Ukázka účesu 6" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (7).jpg" alt="Ukázka účesu 7" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="salon"><img src="media/salon_ (4).jpg" alt="Interiér salonu 4" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (8).jpg" alt="Ukázka účesu 8" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (9).jpg" alt="Ukázka účesu 9" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="salon"><img src="media/salon_ (5).jpg" alt="Interiér salonu 5" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (10).jpg" alt="Ukázka účesu 10" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (11).jpg" alt="Ukázka účesu 11" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="salon"><img src="media/salon_ (6).jpg" alt="Interiér salonu 6" loading="lazy"></button>
+                    <button class="gallery-item" data-cat="hair"><img src="media/hair_ (12).jpg" alt="Ukázka účesu 12" loading="lazy"></button>
+                </div>
+
+                <div class="cta-band reveal">
+                    <h2>Líbí se vám? <em>Objednejte se</em></h2>
+                    <a href="tel:+420603756868" class="btn btn-primary">Zavolat 603 756 868</a>
+                </div>
+            </div>
         </section>
-        <h1>Ukázky mé práce</h1>
-        <section class="gallery-hair">
-            <img src="media/hair_ (1).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (2).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (3).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (4).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (5).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (6).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (7).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (8).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (9).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (10).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (11).jpg" onclick="showPopup(this)">
-            <img src="media/hair_ (12).jpg" onclick="showPopup(this)">
-        </section>
-    </div>
     </main>
-    <footer>
-        <p>&copy; 2025 Kadeřnictví Lena. Všechna práva vyhrazena.</p>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Náhled fotografie" hidden>
+        <button class="lb-close" type="button" aria-label="Zavřít">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <button class="lb-nav lb-prev" type="button" aria-label="Předchozí fotografie">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <figure class="lb-figure">
+            <img class="lb-img" src="" alt="">
+            <figcaption class="lb-counter"></figcaption>
+        </figure>
+        <button class="lb-nav lb-next" type="button" aria-label="Další fotografie">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <img src="img/lena_logo.png" alt="Kadeřnictví Lena" class="footer-logo" width="150" height="48" loading="lazy">
+            <nav aria-label="Patička">
+                <a href="index.html#o-mne">O mně</a>
+                <a href="index.html#cenik">Ceník</a>
+                <a href="gallery.html">Galerie</a>
+                <a href="index.html#contact">Kontakt</a>
+            </nav>
+            <p>&copy; <span data-year>2025</span> Kadeřnictví Lena. Všechna práva vyhrazena.</p>
+        </div>
     </footer>
-    <script src="js/hamburger_menu.js"></script>
-    <script>
-        function goToSection(page, elementId) {
-            window.location.href = `${page}#${elementId}`;
-        }
-    </script>
+
+    <a href="tel:+420603756868" class="fab-call" aria-label="Zavolat do kadeřnictví">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span>Zavolat</span>
+    </a>
+    <button class="to-top" type="button" aria-label="Zpět nahoru">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>
+    </button>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>

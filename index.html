@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadeřnictví Lena</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Kadeřnictví Lena – Holasice | Styl a péče</title>
+    <meta name="description" content="Kadeřnictví LENA v Holasicích. Profesionální střihy, barvení, melír a balayage pro ženy, muže i děti. Více než 15 let zkušeností, produkty Wella a Insight.">
+    <meta name="theme-color" content="#faf7f2">
+    <meta property="og:title" content="Kadeřnictví Lena – Styl a péče">
+    <meta property="og:description" content="Profesionální kadeřnické služby v Holasicích pro ženy, muže i děti.">
+    <meta property="og:image" content="https://www.vlasy-lena.cz/media/salon_%20(1).jpg">
+    <meta property="og:type" content="website">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="icon" href="img/lena_logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- Google tag (gtag.js) -->
     <meta name="google-site-verification" content="jHKw929ceLZ1wCOVfL63R4pESC7MPyJ7yOGIjlHtc8c">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-73RCR5BDD6"></script>
@@ -17,311 +24,341 @@
     gtag('js', new Date());
     gtag('config', 'G-73RCR5BDD6');</script>
     <!--/Google tag -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Kadeřnictví Lena",
+        "image": "https://www.vlasy-lena.cz/img/lenka.png",
+        "telephone": "+420603756868",
+        "email": "kadernictvi@vlasy-lena.cz",
+        "url": "https://www.vlasy-lena.cz",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "nám. Rudé Armády 206",
+            "addressLocality": "Holasice",
+            "postalCode": "664 61",
+            "addressCountry": "CZ"
+        },
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00" }
+        ],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "16" }
+    }
+    </script>
 </head>
 <body>
-    <header class="main-header">
-        <div class="left-side">
-            <div class="logo-container">
-                <img src="img/lena_logo.png" alt="Logo kadeřnictví Lena">
-            </div>
-            <div class="cross"><img src="img/cross.svg" alt="Close menu" id="cross"></div>
-        </div>
-        <div class="right-side">
-            <div class="ham"><img src="img/ham.svg" alt="Open menu" id="ham"></div>
-            <nav>
+    <a class="skip-link" href="#main">Přeskočit na obsah</a>
+
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a href="#top" class="brand" aria-label="Kadeřnictví Lena – úvod">
+                <img src="img/lena_logo.png" alt="Kadeřnictví Lena – styl a péče" width="180" height="58">
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Hlavní navigace">
                 <ul>
-                    <li class="navbar"><a href="#" onclick="document.querySelector('.main-header').scrollIntoView({ behavior: 'smooth' });">Domů</a></li>
-                    <li class="navbar"><a href="#" onclick="document.querySelector('.cenik').scrollIntoView({ behavior: 'smooth' });">Ceník</a></li>
-                    <li class="navbar"><a href="gallery.html">Galerie</a></li>
-                    <li class="navbar"><a href="#" onclick="document.querySelector('.contact').scrollIntoView({ behavior: 'smooth' });">Kontakt</a></li>
+                    <li><a href="#o-mne" data-section>O mně</a></li>
+                    <li><a href="#cenik" data-section>Ceník</a></li>
+                    <li><a href="#recenze" data-section>Recenze</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="#contact" data-section>Kontakt</a></li>
                 </ul>
+                <a href="tel:+420603756868" class="btn btn-primary nav-cta">
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+                    Objednat se
+                </a>
             </nav>
+            <button class="nav-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="site-nav">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
-    <main>
-        <div class="content-wrap">
-            <div class="content">
-                <div class="introduction">
-                    <div class="left-text">
-			<h2>Vítejte v kadeřnictví LENA</h2>
-			<p>Jmenuji se Lenka a s více než 15 lety zkušeností v oboru nabízím profesionální kadeřnické služby pro ženy, muže i děti. Specializuji se na moderní střihy, techniky barvení a styling, přičemž kladu důraz na kvalitu a zdraví vašich vlasů. Mým cílem je vytvořit účes, který podtrhne vaši osobnost a ve kterém se budete cítit skvěle.</p>
-			<p>V příjemném prostředí mého salonu se můžete těšit na individuální přístup a péči šitou na míru vašim potřebám. Používám inovativní a kvalitní produkty značek Wella, Insight a dalších, které zajišťují šetrnou péči o vaše vlasy.</p>
-			<p>Těším se na vaši návštěvu a společně najdeme ten pravý styl pro vás.</p>
-                        <div class="signature">
-                            <img id="sign_1" src="img/sign_1.png" alt="Lenka">
-                            <img id="sign_2" src="img/sign_2.png" alt="Zollmanová">
-                        </div>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <p class="eyebrow reveal">Kadeřnictví v Holasicích</p>
+                    <h1 class="reveal">Styl a péče<br><em>pro vaše vlasy</em></h1>
+                    <p class="hero-lead reveal">Moderní střihy, barvení a styling pro ženy, muže i děti. Individuální přístup, kvalitní produkty a příjemné prostředí, ve kterém si odpočinete.</p>
+                    <div class="hero-actions reveal">
+                        <a href="tel:+420603756868" class="btn btn-primary">Objednat se: 603 756 868</a>
+                        <a href="#cenik" class="btn btn-ghost">Prohlédnout ceník</a>
                     </div>
-                    <div class="right-image">
-                        <img src="img/lenka.png" alt="Lenka - majitelka kadeřnictví">
-                    </div>
+                    <ul class="hero-stats reveal">
+                        <li><strong data-count="15" data-suffix="+">15+</strong><span>let zkušeností</span></li>
+                        <li><strong data-count="5" data-decimals="1">5.0</strong><span>hodnocení Google</span></li>
+                        <li><strong>Wella</strong><span>&amp; Insight produkty</span></li>
+                    </ul>
                 </div>
-                <div class="cenik" id="cenik">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td><strong>Základní služby</strong></td>
-                                <td><strong>Krátké</strong></td>
-                                <td><strong>Dlouhé</strong></td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Mytí, foukání</td>
-                                <td>300,-</td>
-                                <td>500,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Střih, mytí, foukání</td>
-                                <td>400,-</td>
-                                <td>600,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Barva, střih, foukaná</td>
-                                <td>800,-</td>
-                                <td>1200,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Melír, střih, foukaná</td>
-                                <td>900,-</td>
-                                <td>1500,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Tónování</td>
-                                <td>od 300,-</td>
-                                <td>od 400,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Balayage, střih, foukaná</td>
-                                <td>1500,-</td>
-                                <td>2600,-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td><strong>Ostatní služby v salónu</strong></td>
-                                <td><strong>Krátké</strong></td>
-                                <td><strong>Dlouhé</strong></td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Masáž hlavy</td>
-                                <td>550,-</td>
-                                <td>550,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Bondaplex terapie</td>
-                                <td>600,-</td>
-                                <td>900,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Regenerační zábal, laminace</td>
-                                <td>600,-</td>
-                                <td>1400,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Přidání Bondaplexu do barvy</td>
-                                <td>od 200,-</td>
-                                <td>od 300,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Pánský střih</td>
-                                <td>300,-</td>
-                                <td>300,-</td>
-                            </tr>
-                            <tr>
-                                <td class="has-text-align-left">Dětský střih do 15 let</td>
-                                <td>200,-</td>
-                                <td>200,-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="review-header"><br><br><h2> Hodnocení zákazníků</h2><b>Google</b> – <b>5.0</b> z 5, na základě <b>16 hodnocení</b></div>
-                <div class="review-container">
-                    <img src="img/arrow.svg" alt="left arrow" id="left-button">
-                    <div class="review snap-inline">
-                        <div class="review-card"> <!-- 1.Review -->
-                            <div class="review-card-header">
-                                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocJIaI2ahPfnE34ZM38VkkiXsaJs6SCXlMcoE6ffxL_bimu4bw=s120-c-rp-mo-ba4-br100" alt="Martina Fialová">
-                                <div class="review-card-details">
-                                    <div class="review-card-name"> Martina Fialová </div>
-                                    <div class="review-card-date">12 Únor 2024</div>
-                                </div>
-                                <img src="img/google.svg" alt="google">
-                            </div>
-                            <div class="review-card-stars">
-                                <img src="img/star.svg" alt="star">
-                                <img src="img/star.svg" alt="star">
-                                <img src="img/star.svg" alt="star">
-                                <img src="img/star.svg" alt="star">
-                                <img src="img/star.svg" alt="star">
-                            </div>
-                            <div class="review-card-text">
-                                <p>Šikovná a milá paní kadeřnice, která ráda a dobře poradí, příjemné prostředí a skvělé ceny 😀</p>
-                            </div>
-                        </div>
-			<div class="review-card"> <!-- 2.Review -->
-				<div class="review-card-header">
-					<img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocKFWVF9J7gK82Uqg0FZwk_ue_jmxmauW0IA3kK4P3BcovaMMw=s120-c-rp-mo-br100" alt="Marketa Duringerova">
-					<div class="review-card-details">
-						<div class="review-card-name"> Marketa Duringerova </div>
-						<div class="review-card-date">12 Únor 2024</div>
-					</div>
-					<img src="img/google.svg" alt="google">
-				</div>
-				<div class="review-card-stars">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-				</div> 
-				<div class="review-card-text">
-					<p>Paní Lenka má velice šikovné ruce, opravdový profesionál,navíc je její kadeřnictví velice příjemné prostředí.</p>
-				</div>
-			</div>
-			<div class="review-card"> <!-- 3.Review -->
-				<div class="review-card-header">
-					<img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocJEH858NnKgIz6VMZRrYcK1MQvNNZd8yHIQbAkoeMB-vks1Ag=s120-c-rp-mo-br100" alt="Pavla Matlova">
-					<div class="review-card-details">
-						<div class="review-card-name"> Eva Chovancová </div>
-						<div class="review-card-date">12 Únor 2024</div>
-					</div>
-					<img src="img/google.svg" alt="google">
-				</div>
-				<div class="review-card-stars">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-				</div> 
-				<div class="review-card-text">
-					<p>Paní Lenka je prostě profík. Vždy od ní odcházím spokojená a odpočatá. Mám ráda změny a tady to není žádný problém. Barvy jsou krásné a lesklé a střihů už jsem také zkusila více a vždy super. Navíc prostředí je velmi příjemné a útulné...</p>
-				</div>
-			</div>
-			<div class="review-card"> <!-- 4.Review -->
-				<div class="review-card-header">
-					<img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocKR33QhO0Iqd4HajywdoBjBOJ6aea7NDxJ5DtrOELbhPlFGcg=s120-c-rp-mo-br100" alt="Pavla Matlova">
-					<div class="review-card-details">
-						<div class="review-card-name"> Pavla Matlova </div>
-						<div class="review-card-date">12 Únor 2024</div>
-					</div>
-					<img src="img/google.svg" alt="google">
-				</div>
-				<div class="review-card-stars">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-				</div> 
-				<div class="review-card-text">
-					<p>Lenku mohu jen doporučit. Vždy odcházím spokojená s účesem, odpočatá.</p>
-				</div>
-			</div>
-			<div class="review-card"> <!-- 5.Review -->
-				<div class="review-card-header">
-					<img decoding="async" src="https://lh3.googleusercontent.com/a-/ALV-UjU-yxDmsD5Zu9GZFetRtnLgiRJtweyaoa9MZ-_7YFVRV_D1qNhceg=s120-c-rp-mo-br100" alt="Natálie Komárková">
-					<div class="review-card-details">
-						<div class="review-card-name"> Natálie Komárková </div>
-						<div class="review-card-date">12 Únor 2024</div>
-					</div>
-					<img src="img/google.svg" alt="google">
-				</div>
-				<div class="review-card-stars">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-				</div> 
-				<div class="review-card-text">
-					<p>Prostě úžasné! Přišla jsem s totálně zničenými vlasy a odešla s krásně hebkými, lesklými vlasy bez roztřepených konečků. Po více návštěvách jsou moje vlasy zdravější a delší. Nemůžu vynachválit moc moc doporučuji!!🥰</p>
-				</div>
-			</div>
-			<div class="review-card"> <!-- 6.Review -->
-				<div class="review-card-header">
-					<img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocLcr8M-qCsW53bo8Sn4tpXaVodK5JWhuZMa3Np9zTd2Z2l2Nw=s120-c-rp-mo-ba3-br100" alt="Lucie Slavičková">
-					<div class="review-card-details">
-						<div class="review-card-name"> Lucie Slavičková </div>
-						<div class="review-card-date">12 Únor 2024</div>
-					</div>
-					<img src="img/google.svg" alt="google">
-				</div>
-				<div class="review-card-stars">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-					<img src="img/star.svg" alt="star">
-				</div> 
-				<div class="review-card-text">
-					<p>Jsem velmi spokojená. Perfektní melír a střih za příjemnou cenu. Navíc krásně vyfoukané, vlasy dostaly šmrnc a vydrželi několik dní hezké. Doma si to takto nikdy neumím vyfoukat do hladka. Určitě doporučuji!</p>
-				</div>
-			</div>
+                <div class="hero-media reveal">
+                    <div class="hero-arch">
+                        <img src="media/salon_ (1).jpg" alt="Interiér kadeřnictví Lena" fetchpriority="high">
                     </div>
-                    <img src="img/arrow.svg" alt="right arrow" id="right-button">
-                </div>
-                <div class="contact" id="contact">
-                    <div class="contact-left">
-                        <div class="contact-header">
-                            <h2>Kadeřnictví LENA</h2>
-                        </div>
-                        <div class="contact-details">
-                            <div class="contact-address"><img src="img/map_icon.png" alt=""><a href="https://www.google.com/maps?q=kadernictvi-lena-holasice-66461">nám. Rudé Armády 206, Holasice 664 61</a></div>
-                            <div class="contact-phone">
-                                <a href="tel:+420603756868">
-                                    <img src="img/phone_icon.png" alt="">
-                                </a>
-                                <a href="tel:+420603756868">
-                                    <p>+420 603 756 868</p>
-                                </a>
-                            </div>
-                            <div class="contact-email">
-                                <a href="mailto:kadernictvi@vlasy-lena.cz">
-                                    <img src="img/mail_icon.png" alt="">
-                                </a>
-                                <a href="mailto:kadernictvi@vlasy-lena.cz">
-                                    <p>kadernictvi@vlasy-lena.cz</p>
-                                </a>
-                            </div>
-                            <div class="contact-parking">
-                                <img src="img/parking_icon.png" alt="">
-                                <p>Parkování je možné přímo před kadeřnictvím.</p>
-                            </div>
-			    <div class="contact-openhours">
-				<img src="img/clock_icon.png" alt="">
-				<p><b>Otevírací doba:</b></p>
-			    </div>
-			    <p>Po - Pá: 8:00 - 18:00</p>
-			    <p>Sobota: 8:00 - 12:00</p>
-                            <div class="contact-social">
-                                <a href="https://www.facebook.com/lenka.zollmanova" target="_blank">
-                                    <img src="img/facebook_icon.png" alt="">
-                                </a>
-                                <a href="https://www.instagram.com/lenabeautyhair?utm_source=qr&igsh=MWp4aDVhNnd6ZHYxNA==" target="_blank">
-                                    <img src="img/instagram_icon.png" alt="">
-                                </a>
-                                <a href="https://wa.me/420603756868" target="_blank">
-                                    <img src="img/whatsapp_icon.png" alt="">
-                                </a>
-                            </div>
-                        </div>
+                    <div class="hero-badge" aria-hidden="true">
+                        <span class="hero-badge-stars">★★★★★</span>
+                        <span><b>5.0</b> na Google</span>
                     </div>
-                    <div class="contact-right">
-                        <div style="width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 0, 0, 0.308);">
-                            <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d8790.445327875857!2d16.601856156788642!3d49.07875301995959!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712c11ac8d6bf6d%3A0xe941874cc9098d90!2zS2FkZcWZbmljdHbDrSBMZW5h!5e0!3m2!1scs!2sus!4v1736537124090!5m2!1scs!2sus"></iframe>
-                        </div>
+                    <div class="hero-status open-status" data-open-status aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section about" id="o-mne">
+            <div class="container about-inner">
+                <div class="about-media reveal">
+                    <img src="img/lenka.png" alt="Lenka – majitelka kadeřnictví" loading="lazy" width="773" height="1066">
+                </div>
+                <div class="about-text">
+                    <p class="eyebrow reveal">O mně</p>
+                    <h2 class="reveal">Vítejte v kadeřnictví <em>LENA</em></h2>
+                    <p class="reveal">Jmenuji se Lenka a s více než 15 lety zkušeností v oboru nabízím profesionální kadeřnické služby pro ženy, muže i děti. Specializuji se na moderní střihy, techniky barvení a styling, přičemž kladu důraz na kvalitu a zdraví vašich vlasů. Mým cílem je vytvořit účes, který podtrhne vaši osobnost a ve kterém se budete cítit skvěle.</p>
+                    <p class="reveal">V příjemném prostředí mého salonu se můžete těšit na individuální přístup a péči šitou na míru vašim potřebám. Používám inovativní a kvalitní produkty značek Wella, Insight a dalších, které zajišťují šetrnou péči o vaše vlasy.</p>
+                    <p class="reveal">Těším se na vaši návštěvu a společně najdeme ten pravý styl pro vás.</p>
+                    <ul class="features reveal">
+                        <li>
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.3-9A5.4 5.4 0 0 1 12 6a5.4 5.4 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z"/></svg>
+                            Individuální přístup
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.5 5.8 21.2l1.6-7L2 9.5l7.1-.6z"/></svg>
+                            Prémiové produkty
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                            Klidné soukromí salonu
+                        </li>
+                    </ul>
+                    <div class="signature reveal">
+                        <img src="img/sign_1.png" alt="Lenka" width="157" height="72" loading="lazy">
+                        <img src="img/sign_2.png" alt="Zollmanová" width="260" height="84" loading="lazy">
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="section pricing" id="cenik">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Ceník</p>
+                    <h2>Služby a <em>ceny</em></h2>
+                    <p>Ceny jsou orientační v Kč. Konečná cena závisí na délce a hustotě vlasů.</p>
+                </div>
+
+                <div class="pricing-controls reveal">
+                    <div class="tabs" role="tablist" aria-label="Kategorie služeb">
+                        <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-zakladni" id="tab-zakladni" data-tab="zakladni">Základní služby</button>
+                        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-ostatni" id="tab-ostatni" data-tab="ostatni" tabindex="-1">Ostatní služby</button>
+                    </div>
+                    <div class="length-switch" role="radiogroup" aria-label="Délka vlasů">
+                        <button class="length-btn is-active" role="radio" aria-checked="true" data-length="short">Krátké vlasy</button>
+                        <button class="length-btn" role="radio" aria-checked="false" data-length="long">Dlouhé vlasy</button>
+                        <span class="length-indicator" aria-hidden="true"></span>
+                    </div>
+                </div>
+
+                <div class="price-card reveal" data-length-view="short">
+                    <ul class="price-list" role="tabpanel" id="panel-zakladni" aria-labelledby="tab-zakladni">
+                        <li><span class="service">Mytí, foukání</span><span class="dots"></span><span class="price" data-short="300" data-long="500"></span></li>
+                        <li><span class="service">Střih, mytí, foukání</span><span class="dots"></span><span class="price" data-short="400" data-long="600"></span></li>
+                        <li><span class="service">Barva, střih, foukaná</span><span class="dots"></span><span class="price" data-short="800" data-long="1200"></span></li>
+                        <li><span class="service">Melír, střih, foukaná</span><span class="dots"></span><span class="price" data-short="900" data-long="1500"></span></li>
+                        <li><span class="service">Tónování</span><span class="dots"></span><span class="price" data-short="300" data-long="400" data-from></span></li>
+                        <li><span class="service">Balayage, střih, foukaná</span><span class="dots"></span><span class="price" data-short="1500" data-long="2600"></span></li>
+                    </ul>
+                    <ul class="price-list" role="tabpanel" id="panel-ostatni" aria-labelledby="tab-ostatni" hidden>
+                        <li><span class="service">Masáž hlavy</span><span class="dots"></span><span class="price" data-short="550" data-long="550"></span></li>
+                        <li><span class="service">Bondaplex terapie</span><span class="dots"></span><span class="price" data-short="600" data-long="900"></span></li>
+                        <li><span class="service">Regenerační zábal, laminace</span><span class="dots"></span><span class="price" data-short="600" data-long="1400"></span></li>
+                        <li><span class="service">Přidání Bondaplexu do barvy</span><span class="dots"></span><span class="price" data-short="200" data-long="300" data-from></span></li>
+                        <li><span class="service">Pánský střih</span><span class="dots"></span><span class="price" data-short="300" data-long="300"></span></li>
+                        <li><span class="service">Dětský střih do 15 let</span><span class="dots"></span><span class="price" data-short="200" data-long="200"></span></li>
+                    </ul>
+                </div>
+                <p class="pricing-note reveal">Nejste si jistí, co zvolit? <a href="tel:+420603756868">Zavolejte mi</a> a ráda vám poradím.</p>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="section reviews" id="recenze">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Recenze</p>
+                    <h2>Co říkají <em>zákaznice</em></h2>
+                    <p class="rating-summary">
+                        <img src="img/google.svg" alt="" width="20" height="20">
+                        <span><b>5.0</b> z 5 · na základě <b>16 hodnocení</b> na Google</span>
+                    </p>
+                </div>
+
+                <div class="carousel reveal" data-carousel>
+                    <button class="carousel-btn prev" type="button" aria-label="Předchozí recenze">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="carousel-track" tabindex="0" aria-label="Recenze zákazníků">
+                        <article class="review-card">
+                            <p class="review-text">Šikovná a milá paní kadeřnice, která ráda a dobře poradí, příjemné prostředí a skvělé ceny 😀</p>
+                            <footer class="review-author">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocJIaI2ahPfnE34ZM38VkkiXsaJs6SCXlMcoE6ffxL_bimu4bw=s120-c-rp-mo-ba4-br100" alt="" loading="lazy" referrerpolicy="no-referrer" width="44" height="44">
+                                <div><b>Martina Fialová</b><span class="stars" aria-label="5 hvězdiček">★★★★★</span></div>
+                            </footer>
+                        </article>
+                        <article class="review-card">
+                            <p class="review-text">Paní Lenka má velice šikovné ruce, opravdový profesionál, navíc je její kadeřnictví velice příjemné prostředí.</p>
+                            <footer class="review-author">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocKFWVF9J7gK82Uqg0FZwk_ue_jmxmauW0IA3kK4P3BcovaMMw=s120-c-rp-mo-br100" alt="" loading="lazy" referrerpolicy="no-referrer" width="44" height="44">
+                                <div><b>Marketa Duringerova</b><span class="stars" aria-label="5 hvězdiček">★★★★★</span></div>
+                            </footer>
+                        </article>
+                        <article class="review-card">
+                            <p class="review-text">Paní Lenka je prostě profík. Vždy od ní odcházím spokojená a odpočatá. Mám ráda změny a tady to není žádný problém. Barvy jsou krásné a lesklé a střihů už jsem také zkusila více a vždy super. Navíc prostředí je velmi příjemné a útulné...</p>
+                            <footer class="review-author">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocJEH858NnKgIz6VMZRrYcK1MQvNNZd8yHIQbAkoeMB-vks1Ag=s120-c-rp-mo-br100" alt="" loading="lazy" referrerpolicy="no-referrer" width="44" height="44">
+                                <div><b>Eva Chovancová</b><span class="stars" aria-label="5 hvězdiček">★★★★★</span></div>
+                            </footer>
+                        </article>
+                        <article class="review-card">
+                            <p class="review-text">Lenku mohu jen doporučit. Vždy odcházím spokojená s účesem, odpočatá.</p>
+                            <footer class="review-author">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocKR33QhO0Iqd4HajywdoBjBOJ6aea7NDxJ5DtrOELbhPlFGcg=s120-c-rp-mo-br100" alt="" loading="lazy" referrerpolicy="no-referrer" width="44" height="44">
+                                <div><b>Pavla Matlova</b><span class="stars" aria-label="5 hvězdiček">★★★★★</span></div>
+                            </footer>
+                        </article>
+                        <article class="review-card">
+                            <p class="review-text">Prostě úžasné! Přišla jsem s totálně zničenými vlasy a odešla s krásně hebkými, lesklými vlasy bez roztřepených konečků. Po více návštěvách jsou moje vlasy zdravější a delší. Nemůžu vynachválit moc moc doporučuji!!🥰</p>
+                            <footer class="review-author">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjU-yxDmsD5Zu9GZFetRtnLgiRJtweyaoa9MZ-_7YFVRV_D1qNhceg=s120-c-rp-mo-br100" alt="" loading="lazy" referrerpolicy="no-referrer" width="44" height="44">
+                                <div><b>Natálie Komárková</b><span class="stars" aria-label="5 hvězdiček">★★★★★</span></div>
+                            </footer>
+                        </article>
+                        <article class="review-card">
+                            <p class="review-text">Jsem velmi spokojená. Perfektní melír a střih za příjemnou cenu. Navíc krásně vyfoukané, vlasy dostaly šmrnc a vydrželi několik dní hezké. Doma si to takto nikdy neumím vyfoukat do hladka. Určitě doporučuji!</p>
+                            <footer class="review-author">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocLcr8M-qCsW53bo8Sn4tpXaVodK5JWhuZMa3Np9zTd2Z2l2Nw=s120-c-rp-mo-ba3-br100" alt="" loading="lazy" referrerpolicy="no-referrer" width="44" height="44">
+                                <div><b>Lucie Slavičková</b><span class="stars" aria-label="5 hvězdiček">★★★★★</span></div>
+                            </footer>
+                        </article>
+                    </div>
+                    <button class="carousel-btn next" type="button" aria-label="Další recenze">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                    <div class="carousel-dots" role="group" aria-label="Výběr recenze"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery teaser -->
+        <section class="section teaser">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Galerie</p>
+                    <h2>Ukázky mé <em>práce</em></h2>
+                </div>
+                <div class="teaser-grid">
+                    <a href="gallery.html" class="teaser-item reveal"><img src="media/hair_ (1).jpg" alt="Ukázka účesu" loading="lazy"></a>
+                    <a href="gallery.html" class="teaser-item reveal"><img src="media/hair_ (2).jpg" alt="Ukázka účesu" loading="lazy"></a>
+                    <a href="gallery.html" class="teaser-item reveal"><img src="media/hair_ (5).jpg" alt="Ukázka účesu" loading="lazy"></a>
+                    <a href="gallery.html" class="teaser-item reveal"><img src="media/hair_ (8).jpg" alt="Ukázka účesu" loading="lazy"></a>
+                </div>
+                <div class="center reveal">
+                    <a href="gallery.html" class="btn btn-ghost">Zobrazit celou galerii
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact" id="contact">
+            <div class="container contact-inner">
+                <div class="contact-info">
+                    <p class="eyebrow reveal">Kontakt</p>
+                    <h2 class="reveal">Těším se na <em>vaši návštěvu</em></h2>
+                    <ul class="contact-list reveal">
+                        <li>
+                            <span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+                            <div><small>Adresa</small><a href="https://www.google.com/maps?q=kadernictvi-lena-holasice-66461" target="_blank" rel="noopener">nám. Rudé Armády 206, Holasice 664 61</a></div>
+                        </li>
+                        <li>
+                            <span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+                            <div><small>Telefon</small><a href="tel:+420603756868">+420 603 756 868</a></div>
+                        </li>
+                        <li>
+                            <span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+                            <div>
+                                <small>E-mail</small>
+                                <span class="copy-row">
+                                    <a href="mailto:kadernictvi@vlasy-lena.cz">kadernictvi@vlasy-lena.cz</a>
+                                    <button type="button" class="copy-btn" data-copy="kadernictvi@vlasy-lena.cz" aria-label="Zkopírovat e-mail">Kopírovat</button>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg></span>
+                            <div><small>Parkování</small>Parkování je možné přímo před kadeřnictvím.</div>
+                        </li>
+                    </ul>
+
+                    <div class="hours reveal">
+                        <div class="hours-head">
+                            <h3>Otevírací doba</h3>
+                            <span class="open-status" data-open-status></span>
+                        </div>
+                        <table class="hours-table">
+                            <tbody>
+                                <tr data-days="1,2,3,4,5"><th scope="row">Pondělí – Pátek</th><td>8:00 – 18:00</td></tr>
+                                <tr data-days="6"><th scope="row">Sobota</th><td>8:00 – 12:00</td></tr>
+                                <tr data-days="0"><th scope="row">Neděle</th><td>Zavřeno</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="social reveal">
+                        <a href="https://www.facebook.com/lenka.zollmanova" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/lenabeautyhair?utm_source=qr&amp;igsh=MWp4aDVhNnd6ZHYxNA==" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>
+                        </a>
+                        <a href="https://wa.me/420603756868" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.3-1.8-1-.8.8a4 4 0 0 1-2.2-2.2l.8-.8-1-1.8z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-map reveal">
+                    <iframe title="Mapa – Kadeřnictví Lena, Holasice" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d8790.445327875857!2d16.601856156788642!3d49.07875301995959!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712c11ac8d6bf6d%3A0xe941874cc9098d90!2zS2FkZcWZbmljdHbDrSBMZW5h!5e0!3m2!1scs!2sus!4v1736537124090!5m2!1scs!2sus"></iframe>
+                    <a class="btn btn-primary map-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kade%C5%99nictv%C3%AD+Lena+Holasice" target="_blank" rel="noopener">Navigovat</a>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Kadeřnictví Lena. Všechna práva vyhrazena.</p>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <img src="img/lena_logo.png" alt="Kadeřnictví Lena" class="footer-logo" width="150" height="48" loading="lazy">
+            <nav aria-label="Patička">
+                <a href="#o-mne">O mně</a>
+                <a href="#cenik">Ceník</a>
+                <a href="gallery.html">Galerie</a>
+                <a href="#contact">Kontakt</a>
+            </nav>
+            <p>&copy; <span data-year>2025</span> Kadeřnictví Lena. Všechna práva vyhrazena.</p>
+        </div>
     </footer>
-    <script src="js/review.js"></script>
-    <script src="js/hamburger_menu.js"></script>
+
+    <a href="tel:+420603756868" class="fab-call" aria-label="Zavolat do kadeřnictví">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span>Zavolat</span>
+    </a>
+    <button class="to-top" type="button" aria-label="Zpět nahoru">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>
+    </button>
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>
