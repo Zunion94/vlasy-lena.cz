@@ -187,36 +187,48 @@ h1 em, h2 em {
 .brand {
     --mark-line: var(--navy);
     --mark-accent: var(--gold);
+    --mark-bg: var(--cream);
     display: inline-flex;
     align-items: center;
     gap: 12px;
     color: var(--navy);
 }
 .brand-mark {
-    width: 36px;
-    height: 42px;
+    width: 40px;
+    height: 46px;
     overflow: visible;
 }
-.brand-mark path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.brand-mark * { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .mark-arch { stroke: var(--mark-accent); stroke-width: 1.6; }
-.mark-strand {
-    stroke: var(--mark-line);
-    stroke-width: 2.6;
-    stroke-dasharray: 80;
-    stroke-dashoffset: 0;
+.mark-comb rect { stroke: var(--mark-accent); stroke-width: 1.6; }
+.mark-teeth { stroke: var(--mark-accent); stroke-width: 1.4; }
+.mark-knock { stroke: var(--mark-bg); stroke-width: 4.2; }
+.mark-scissors { stroke: var(--mark-line); stroke-width: 2.2; }
+.brand .mark-pivot { fill: var(--mark-accent); stroke: none; }
+
+/* vykreslení loga při načtení: rám → hřeben → nůžky */
+.js .site-header .brand-mark [pathLength] {
+    stroke-dasharray: 1;
+    animation: drawMark 1.1s var(--ease) both;
 }
-.mark-strand-thin { stroke: var(--mark-accent); stroke-width: 1.3; }
-.brand .mark-spark { fill: var(--mark-accent); stroke: none; transform-origin: 33px 22.3px; }
-.brand:hover .mark-spark { animation: sparkle .9s var(--ease); }
-.js .site-header .mark-strand { animation: drawStrand 1.6s var(--ease) .2s both; }
-@keyframes drawStrand {
-    from { stroke-dashoffset: 80; }
+.js .site-header .mark-arch { animation-duration: 1.4s !important; }
+.js .site-header .mark-comb [pathLength] { animation-delay: .45s; }
+.js .site-header .mark-blade [pathLength] { animation-delay: .8s; }
+.js .site-header .mark-pivot { animation: fadeIn .4s 1.6s both; }
+@keyframes drawMark {
+    from { stroke-dashoffset: 1; }
     to { stroke-dashoffset: 0; }
 }
-@keyframes sparkle {
-    0%, 100% { transform: scale(1) rotate(0); }
-    50% { transform: scale(1.5) rotate(45deg); }
+@keyframes fadeIn {
+    from { opacity: 0; }
 }
+
+/* cvaknutí nůžek po najetí myší */
+.mark-blade { transform-origin: 0 0; }
+.brand:hover .mark-blade-a { animation: snipA .5s var(--ease); }
+.brand:hover .mark-blade-b { animation: snipB .5s var(--ease); }
+@keyframes snipA { 50% { transform: rotate(8deg); } }
+@keyframes snipB { 50% { transform: rotate(-8deg); } }
 .brand-text {
     display: flex;
     flex-direction: column;
@@ -910,6 +922,7 @@ h1 em, h2 em {
 .brand-footer {
     --mark-line: var(--white);
     --mark-accent: #d2b48c;
+    --mark-bg: var(--ink);
     color: var(--white);
 }
 .brand-footer .brand-tag { color: #d2b48c; }
@@ -1153,7 +1166,7 @@ h1 em, h2 em {
     }
     .site-nav ul a::after { left: 16px; right: 16px; }
     .site-header .brand { position: relative; z-index: 120; }
-    .brand-mark { width: 31px; height: 36px; }
+    .brand-mark { width: 35px; height: 40px; }
     .brand-name { font-size: 1.7rem; }
     .brand-tag { font-size: 0.52rem; }
 
